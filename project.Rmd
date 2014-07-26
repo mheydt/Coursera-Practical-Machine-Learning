@@ -30,7 +30,7 @@ training[is.na(training)] <- 0
 test[is.na(test)] <- 0
 ```
 
-Only use data that is numberic
+Only use data that is numeric
 ```{r}
 num_features_idx <- which(lapply(training,class) %in% c('numeric') )
 training <- cbind(training$classe, training[,num_features_idx])
